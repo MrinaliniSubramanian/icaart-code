@@ -1,0 +1,148 @@
+language Essence 1.3
+
+$metric4.essence - Leximin
+
+given height, width : int
+given map : matrix [int(1..height), int(1..width)] of int(0..1)
+
+given agents : sequence of
+                record { start_x : int
+                       , start_y : int
+                       , goal_x : int
+                       , goal_y : int
+                       }
+letting nb_agents be |agents|
+
+given steps : int
+
+find agent_location :
+        matrix [int(1..nb_agents), int(1..steps)] of record {x : int(1..height), y : int(1..width)}
+letting MOVE be new type enum {U,R,D,L,W}
+
+$ with respect to step - 1
+find agent_move : matrix [int(1..nb_agents), int(2..steps)] of MOVE
+
+
+such that
+[ agent_location[agent_id, 1][x] = agent_info[start_x] /\
+  agent_location[agent_id, 1][y] = agent_info[start_y]
+| (agent_id, agent_info) <- agents
+]
+
+such that
+[ agent_location[agent_id, steps][x] = agent_info[goal_x] /\
+  agent_location[agent_id, steps][y] = agent_info[goal_y]
+| (agent_id, agent_info) <- agents
+]
+
+such that
+[
+    (
+        (agent_location[a,t+1][x] = agent_location[a,t][x] + 1 /\
+         agent_location[a,t+1][y] = agent_location[a,t][y])
+    \/
+        (agent_location[a,t+1][x] = agent_location[a,t][x] - 1 /\
+         agent_location[a,t+1][y] = agent_location[a,t][y])
+    \/
+        (agent_location[a,t+1][x] = agent_location[a,t][x] /\
+         agent_location[a,t+1][y] = agent_location[a,t][y] + 1)
+    \/
+        (agent_location[a,t+1][x] = agent_location[a,t][x] /\
+         agent_location[a,t+1][y] = agent_location[a,t][y] - 1)
+    \/
+        (agent_location[a,t+1][x] = agent_location[a,t][x] /\
+         agent_location[a,t+1][y] = agent_location[a,t][y])
+    )
+| a : int(1..nb_agents)
+, t : int(1..steps-1)
+]
+
+$ Agents must always be on free cells and can never occupy walls.
+such that
+[ map[agent_location[a, t][x], agent_location[a, t][y]] = 0
+| a : int(1..nb_agents)
+, t : int(1..steps)
+]
+
+such that
+[ (agent_location[a, t][x], agent_location[a, t][y])
+    != (agent_location[b, t][x], agent_location[b, t][y])
+| t : int(1..steps)
+, a : int(1..nb_agents)
+, b : int(a+1..nb_agents)
+]
+
+such that
+[ !(agent_location[a, t][x] = agent_location[b, t-1][x] /\
+    agent_location[a, t][y] = agent_location[b, t-1][y] /\
+    agent_location[b, t][x] = agent_location[a, t-1][x] /\
+    agent_location[b, t][y] = agent_location[a, t-1][y])
+| t : int(2..steps)
+, a : int(1..nb_agents)
+, b : int(a+1..nb_agents)
+]
+
+
+find T :
+    matrix [int(1..nb_agents), int(1..nb_agents), int(1..steps)] of int(0..steps)
+
+such that
+[ T[a, a, s] = steps
+| a : int(1..nb_agents)
+, s : int(1..steps)
+]
+
+such that
+[ T[a, b, s] =
+    min([ [steps, |s - s2| ; int(0..1)]
+            [toInt(agent_location[a, s] = agent_location[b, s2])]
+        | s2 : int(1..steps)
+        ])
+| a : int(1..nb_agents)
+, b : int(1..nb_agents)
+, s : int(1..steps)
+, a != b
+]
+
+letting TOP be nb_agents * (nb_agents - 1) / 2 * steps
+
+find T_counts : matrix [int(1..steps-1)] of int(0..TOP)
+
+such that
+[ T_counts[d] =
+    sum([ 1
+        | a : int(1..nb_agents)
+        , b : int(a+1..nb_agents)
+        , s : int(1..steps)
+        , T[a, b, s] != steps
+        , T[a, b, s] = d
+        ])
+| d : int(1..steps-1)
+]
+
+
+given T_incumbent :
+    set (maxSize 1) of
+        matrix [int(1..nb_agents), int(1..nb_agents), int(1..steps)]
+        of int(0..steps)
+
+find T_incumbent_counts :
+    matrix [int(1..steps-1)] of int(0..TOP)
+
+such that
+[ T_incumbent_counts[d] =
+    sum([ 1
+        | a : int(1..nb_agents)
+        , b : int(a+1..nb_agents)
+        , s : int(1..steps)
+        , T_prev[a, b, s] != steps
+        , T_prev[a, b, s] = d
+        ])
+| T_prev <- T_incumbent
+, d : int(1..steps-1)
+]
+
+$If we already have a previous solution (incumbent), force the new solution to be strictly better in lexicographic order.
+such that
+    |T_incumbent| = 1 ->
+        T_counts <lex T_incumbent_counts
