@@ -1,0 +1,20 @@
+letting height be 5
+letting width be 5
+letting map be
+[
+  [1, 0, 0, 0, 1],
+  [0, 0, 1, 0, 1],
+  [0, 1, 0, 0, 1],
+  [0, 0, 0, 0, 0],
+  [0, 0, 1, 0, 0]
+]
+
+letting agents be
+[
+  record { start_x = 4, start_y = 4, goal_x = 3, goal_y = 1 },
+  record { start_x = 4, start_y = 5, goal_x = 1, goal_y = 3 },
+  record { start_x = 3, start_y = 4, goal_x = 3, goal_y = 3 },
+  record { start_x = 4, start_y = 3, goal_x = 1, goal_y = 2 }
+]
+
+letting steps be 8

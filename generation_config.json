@@ -1,0 +1,64 @@
+{
+  "seed": 73,
+  "grid_sizes": [
+    [
+      5,
+      5
+    ]
+  ],
+  "nominal_obstacle_percentages": [
+    30,
+    25,
+    20,
+    15,
+    10,
+    5,
+    0
+  ],
+  "scenarios_per_map": 3,
+  "agent_counts": {
+    "5x5": [
+      2,
+      3,
+      4
+    ]
+  },
+  "variant_design": "Each density variant is independently derived by removing obstacles from the same connected maximum-density base map.",
+  "realized_densities": {
+    "5x5:30": {
+      "nominal_percentage": 30,
+      "obstacle_count": 7,
+      "actual_percentage": 28.0
+    },
+    "5x5:25": {
+      "nominal_percentage": 25,
+      "obstacle_count": 6,
+      "actual_percentage": 24.0
+    },
+    "5x5:20": {
+      "nominal_percentage": 20,
+      "obstacle_count": 5,
+      "actual_percentage": 20.0
+    },
+    "5x5:15": {
+      "nominal_percentage": 15,
+      "obstacle_count": 3,
+      "actual_percentage": 12.0
+    },
+    "5x5:10": {
+      "nominal_percentage": 10,
+      "obstacle_count": 2,
+      "actual_percentage": 8.0
+    },
+    "5x5:5": {
+      "nominal_percentage": 5,
+      "obstacle_count": 1,
+      "actual_percentage": 4.0
+    },
+    "5x5:0": {
+      "nominal_percentage": 0,
+      "obstacle_count": 0,
+      "actual_percentage": 0.0
+    }
+  }
+}
