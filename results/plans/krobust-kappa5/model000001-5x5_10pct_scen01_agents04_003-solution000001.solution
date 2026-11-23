@@ -1,0 +1,10 @@
+language Essence 1.3
+
+letting agent_location be [[record {x = 4, y = 5}, record {x = 4, y = 4}, record {x = 3, y = 4}, record {x = 3, y = 3}, record {x = 2, y = 3}, record {x = 1, y = 3}, record {x = 2, y = 3}, record {x = 3, y = 3}; int(1..8)], [record {x = 5, y = 2}, record {x = 4, y = 2}, record {x = 3, y = 2}, record {x = 2, y = 2}, record {x = 2, y = 2}, record {x = 2, y = 2}, record {x = 2, y = 2}, record {x = 2, y = 2}; int(1..8)], [record {x = 1, y = 4}, record {x = 1, y = 4}, record {x = 2, y = 4}, record {x = 2, y = 4}, record {x = 1, y = 4}, record {x = 2, y = 4}, record {x = 2, y = 4}, record {x = 2, y = 4}; int(1..8)], [record {x = 1, y = 2}, record {x = 1, y = 1}, record {x = 2, y = 1}, record {x = 2, y = 1}, record {x = 2, y = 1}, record {x = 3, y = 1}, record {x = 4, y = 1}, record {x = 4, y = 2}; int(1..8)]; int(1..4)]
+letting agent_move be [[L, U, L, U, U, D, D; int(2..8)], [U, U, U, W, W, W, W; int(2..8)], [W, D, W, U, D, W, W; int(2..8)], [L, D, W, W, D, D, R; int(2..8)]; int(1..4)]
+$ Visualisation for agent_move
+$ L U L U U D D
+$ U U U W W W W
+$ W D W U D W W
+$ L D W W D D R
+
