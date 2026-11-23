@@ -1,0 +1,86 @@
+{
+  "instance": "5x5_10pct_scen02_agents04",
+  "plans": {
+    "IV": {
+      "fallback_reason": "",
+      "model_name": "metric1.essence",
+      "model_sha256": "b945afbbb7e773225c5a7340503f11253695af9d2a2c01494aafbdd8cb1abd89",
+      "optimality_proven": true,
+      "plan_label": "IV",
+      "robustness_kappa": "",
+      "solution_file": "results/plans/metric1/opt/model000001-5x5_10pct_scen02_agents04_001-solution000001.solution",
+      "used_fallback_incumbent": false
+    },
+    "Leximin": {
+      "fallback_reason": "",
+      "model_name": "metric4.essence",
+      "model_sha256": "2ec5b0a801b957d8f6862854cfb799948c6756f653e87a730692f0b940263f9f",
+      "optimality_proven": true,
+      "plan_label": "Leximin",
+      "robustness_kappa": "",
+      "solution_file": "results/plans/metric4/opt/model000001-5x5_10pct_scen02_agents04_005-solution000001.solution",
+      "used_fallback_incumbent": false
+    },
+    "MTD": {
+      "fallback_reason": "",
+      "model_name": "metric2.essence",
+      "model_sha256": "b73ec4e207828720d3f40e340fcdb61b09def76b6bcaa39c33ab132d5d0e7376",
+      "optimality_proven": true,
+      "plan_label": "MTD",
+      "robustness_kappa": "",
+      "solution_file": "results/plans/metric2/opt/model000001-5x5_10pct_scen02_agents04_001-solution000001.solution",
+      "used_fallback_incumbent": false
+    },
+    "SumTD": {
+      "fallback_reason": "",
+      "model_name": "metric3.essence",
+      "model_sha256": "6d4385b2b88d2cbf0fd047387e4f5645e693670871f95d1ec51dca9b978e80f7",
+      "optimality_proven": true,
+      "plan_label": "SumTD",
+      "robustness_kappa": "",
+      "solution_file": "results/plans/metric3/opt/model000001-5x5_10pct_scen02_agents04_001-solution000001.solution",
+      "used_fallback_incumbent": false
+    },
+    "krobust_kappa10": {
+      "fallback_reason": "",
+      "model_name": "krobust.essence",
+      "model_sha256": "9b1fc3a69a59712a85e809b2924fd6f6c8fb30a87bdd7794bd36b87b834c3744",
+      "optimality_proven": true,
+      "plan_label": "krobust",
+      "robustness_kappa": 10,
+      "solution_file": "results/plans/krobust-kappa10/model000001-5x5_10pct_scen02_agents04_008-solution000001.solution",
+      "used_fallback_incumbent": false
+    },
+    "krobust_kappa15": {
+      "fallback_reason": "",
+      "model_name": "krobust.essence",
+      "model_sha256": "9b1fc3a69a59712a85e809b2924fd6f6c8fb30a87bdd7794bd36b87b834c3744",
+      "optimality_proven": true,
+      "plan_label": "krobust",
+      "robustness_kappa": 15,
+      "solution_file": "results/plans/krobust-kappa15/model000001-5x5_10pct_scen02_agents04_013-solution000001.solution",
+      "used_fallback_incumbent": false
+    },
+    "krobust_kappa5": {
+      "fallback_reason": "",
+      "model_name": "krobust.essence",
+      "model_sha256": "9b1fc3a69a59712a85e809b2924fd6f6c8fb30a87bdd7794bd36b87b834c3744",
+      "optimality_proven": true,
+      "plan_label": "krobust",
+      "robustness_kappa": 5,
+      "solution_file": "results/plans/krobust-kappa5/model000001-5x5_10pct_scen02_agents04_003-solution000001.solution",
+      "used_fallback_incumbent": false
+    },
+    "makespan": {
+      "fallback_reason": "",
+      "model_name": "mapf-makespan.essence",
+      "model_sha256": "bd910183ea04991b24644e9964d79259e5a6457d5317c31ad767934d3daf0e59",
+      "optimality_proven": true,
+      "plan_label": "makespan",
+      "robustness_kappa": "",
+      "solution_file": "results/plans/makespan/model000001-5x5_10pct_scen02_agents04_001-solution000001.solution",
+      "used_fallback_incumbent": false
+    }
+  },
+  "schema_version": 2
+}
