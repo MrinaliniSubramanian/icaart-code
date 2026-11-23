@@ -1,0 +1,16 @@
+plan,delay_duration,best_or_tied,strict_best
+makespan,5,22,1
+IV,5,35,1
+MTD,5,36,3
+SumTD,5,50,6
+Leximin,5,48,5
+makespan,10,22,1
+IV,10,36,2
+MTD,10,36,3
+SumTD,10,50,7
+Leximin,10,46,4
+makespan,15,22,1
+IV,15,37,3
+MTD,15,35,3
+SumTD,15,49,7
+Leximin,15,45,4
