@@ -1,0 +1,24 @@
+letting height be 7
+letting width be 12
+letting map be
+[ [ 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 1 ]
+, [ 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 0, 1 ]
+, [ 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0 ]
+, [ 1, 0, 1, 1, 1, 1, 0, 1, 0, 1, 0, 1 ]
+, [ 1, 0, 1, 1, 1, 1, 0, 0, 0, 1, 0, 1 ]
+, [ 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 0, 1 ]
+, [ 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1 ]
+]
+
+letting agents be
+    [ record { start_x = 3
+             , start_y = 1
+             , goal_x = 3
+             , goal_y = 12 }
+    , record { start_x = 7
+             , start_y = 2
+             , goal_x = 1
+             , goal_y = 11 }
+    ]
+
+letting steps be 1
