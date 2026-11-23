@@ -1,0 +1,25 @@
+language Essence 1.3
+
+letting T be [[[5, 5, 5, 5, 5; int(1..5)], [5, 5, 5, 5, 5; int(1..5)], [5, 5, 5, 5, 5; int(1..5)]; int(1..3)], [[5, 5, 5, 5, 5; int(1..5)], [5, 5, 5, 5, 5; int(1..5)], [5, 5, 5, 5, 5; int(1..5)]; int(1..3)], [[5, 5, 5, 5, 5; int(1..5)], [5, 5, 5, 5, 5; int(1..5)], [5, 5, 5, 5, 5; int(1..5)]; int(1..3)]; int(1..3)]
+$ Visualisation for T
+$ 5 5 5 5 5
+$ 5 5 5 5 5
+$ 5 5 5 5 5
+$ 
+$ 5 5 5 5 5
+$ 5 5 5 5 5
+$ 5 5 5 5 5
+$ 
+$ 5 5 5 5 5
+$ 5 5 5 5 5
+$ 5 5 5 5 5
+$ 
+
+letting T_minimum be 5
+letting agent_location be [[record {x = 2, y = 2}, record {x = 2, y = 1}, record {x = 2, y = 1}, record {x = 3, y = 1}, record {x = 3, y = 1}; int(1..5)], [record {x = 5, y = 3}, record {x = 5, y = 4}, record {x = 5, y = 5}, record {x = 5, y = 5}, record {x = 5, y = 5}; int(1..5)], [record {x = 5, y = 1}, record {x = 5, y = 2}, record {x = 4, y = 2}, record {x = 4, y = 3}, record {x = 4, y = 4}; int(1..5)]; int(1..3)]
+letting agent_move be [[L, W, D, W; int(2..5)], [R, R, W, W; int(2..5)], [R, U, R, R; int(2..5)]; int(1..3)]
+$ Visualisation for agent_move
+$ L W D W
+$ R R W W
+$ R U R R
+
