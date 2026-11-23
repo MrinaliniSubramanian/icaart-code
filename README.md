@@ -1,2 +1,2 @@
 # icaart-code
-Diversity submission for ICAART
+The experiments use 63 MAPF instances with 2–4 agents and nominal obstacle densities from 0% to 30%. They compare a makespan baseline with four diversity objectives (IV, MTD, SumTD, and Leximin) at the same makespan. They also evaluate k-robust plans with k equal to the injected delay duration. The Action Dependency Graph (ADG) simulation injects one delay of 5, 10, or 15 timesteps per trial.
