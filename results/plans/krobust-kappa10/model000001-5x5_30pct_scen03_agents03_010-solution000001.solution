@@ -1,0 +1,9 @@
+language Essence 1.3
+
+letting agent_location be [[record {x = 2, y = 1}, record {x = 2, y = 2}, record {x = 1, y = 2}, record {x = 1, y = 3}, record {x = 1, y = 3}, record {x = 1, y = 3}, record {x = 1, y = 4}, record {x = 1, y = 4}, record {x = 1, y = 4}, record {x = 2, y = 4}, record {x = 2, y = 4}, record {x = 2, y = 4}, record {x = 2, y = 4}, record {x = 3, y = 4}, record {x = 3, y = 4}, record {x = 3, y = 4}, record {x = 3, y = 3}; int(1..17)], [record {x = 5, y = 5}, record {x = 5, y = 4}, record {x = 4, y = 4}, record {x = 4, y = 5}, record {x = 4, y = 4}, record {x = 4, y = 5}, record {x = 4, y = 4}, record {x = 4, y = 4}, record {x = 4, y = 4}, record {x = 4, y = 4}, record {x = 4, y = 5}, record {x = 4, y = 4}, record {x = 4, y = 4}, record {x = 4, y = 3}, record {x = 4, y = 2}, record {x = 4, y = 1}, record {x = 5, y = 1}; int(1..17)], [record {x = 3, y = 4}, record {x = 3, y = 3}, record {x = 4, y = 3}, record {x = 4, y = 2}, record {x = 4, y = 1}, record {x = 3, y = 1}, record {x = 3, y = 1}, record {x = 3, y = 1}, record {x = 3, y = 1}, record {x = 3, y = 1}, record {x = 3, y = 1}, record {x = 3, y = 1}, record {x = 3, y = 1}, record {x = 2, y = 1}, record {x = 2, y = 2}, record {x = 1, y = 2}, record {x = 1, y = 3}; int(1..17)]; int(1..3)]
+letting agent_move be [[R, U, R, W, W, R, W, W, D, W, W, W, D, W, W, L; int(2..17)], [L, U, R, L, R, L, W, W, W, R, L, W, L, L, L, D; int(2..17)], [L, D, L, L, U, W, W, W, W, W, W, W, U, R, U, R; int(2..17)]; int(1..3)]
+$ Visualisation for agent_move
+$ R U R W W R W W D W W W D W W L
+$ L U R L R L W W W R L W L L L D
+$ L D L L U W W W W W W W U R U R
+
