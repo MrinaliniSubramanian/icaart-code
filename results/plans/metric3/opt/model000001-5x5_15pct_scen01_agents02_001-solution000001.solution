@@ -1,0 +1,18 @@
+language Essence 1.3
+
+letting T be [[[5, 5, 5, 5, 5; int(1..5)], [5, 5, 2, 5, 5; int(1..5)]; int(1..2)], [[0, 0, 0, 0, 0; int(1..5)], [5, 5, 5, 5, 5; int(1..5)]; int(1..2)]; int(1..2)]
+$ Visualisation for T
+$ 5 5 5 5 5
+$ 5 5 2 5 5
+$ 
+$ 0 0 0 0 0
+$ 5 5 5 5 5
+$ 
+
+letting T_recip be 6
+letting agent_location be [[record {x = 3, y = 3}, record {x = 3, y = 4}, record {x = 4, y = 4}, record {x = 5, y = 4}, record {x = 5, y = 5}; int(1..5)], [record {x = 4, y = 4}, record {x = 4, y = 3}, record {x = 4, y = 3}, record {x = 4, y = 2}, record {x = 5, y = 2}; int(1..5)]; int(1..2)]
+letting agent_move be [[R, D, D, R; int(2..5)], [L, W, L, D; int(2..5)]; int(1..2)]
+$ Visualisation for agent_move
+$ R D D R
+$ L W L D
+
